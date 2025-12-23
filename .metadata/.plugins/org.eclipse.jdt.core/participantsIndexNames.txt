@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+/Users/choejiyun/Desktop/workspace/jsp/jsp-study/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2792413939.index
+/JSPBook/src/main/java
+/Users/choejiyun/Desktop/workspace/jsp/jsp-study/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3309311433.index
+/BookMarket/src/main/java
