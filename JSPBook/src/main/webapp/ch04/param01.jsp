@@ -16,6 +16,8 @@
 	</jsp:forward>
 	<p>Jakarta Server Page</p>
 	
+	<!-- 사용 예 : 주문 완료 후 주문 확인 페이지로 이동 시 주문번호 및 주문 정보들 전달 -->
+	
 </body>
 </html>
 
