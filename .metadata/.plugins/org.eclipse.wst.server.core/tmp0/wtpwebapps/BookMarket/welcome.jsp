@@ -16,17 +16,16 @@
 	<h3>Welcome to Web Market!</h3> -->
 	
 	<%!
-		String greeting = "도서 쇼핑몰에 오신걸 환영합니다.";
+		String greeting = "도서 쇼핑몰에 오신 것을 환영합니다";
 		String tagline = "Welcome to Web Market!";
 	%>
 	
-	<!-- 헤더 타이틀 영역 -->
-	<%@ include file="menu.jsp" %>
-	
 	<div class="container py-4">
-		
-   
+		<!-- 헤더(메뉴) 영역 -->
+		<%@ include file="menu.jsp" %>
+    
     <!-- 중간 타이틀 영역 -->
+    <!-- Quiz: 동적 include로 변경(title.jsp) -->
     <jsp:include page="title.jsp">
     	<jsp:param value="<%= greeting %>" name="title"/>
     	<jsp:param value="BookMarket" name="sub"/>
@@ -44,15 +43,14 @@
         		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss a");
         		
         		String CT = now.format(formatter);
-        		out.println("현재 접속 시간 : " + CT);
+        		out.println("현재 접속 시각: " + CT);
         	%>
-        	
         </div>
       </div>
  		</div>
  		
- 		<!-- footer 타이틀 영역 -->
- 		<%@ include file="footer.jsp" %>
+ 		<!-- 푸터(바닥글) 영역 -->
+   	<%@ include file="footer.jsp" %>
 	</div>
 </body>
 </html>
