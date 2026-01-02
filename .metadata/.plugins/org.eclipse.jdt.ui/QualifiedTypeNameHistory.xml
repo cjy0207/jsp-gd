@@ -3,5 +3,10 @@
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServletResponse"/>
     <fullyQualifiedTypeName name="jakarta.servlet.ServletConfig"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.MultipartConfig"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.Part"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="dao.BookRepository"/>
+    <fullyQualifiedTypeName name="dto.Book"/>
 </qualifiedTypeNameHistroy>
