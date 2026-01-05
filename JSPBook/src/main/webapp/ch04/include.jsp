@@ -11,7 +11,7 @@
 	<!-- include 액션 태그로 현재 날짜와 시간을 출력하는 페이지 포함하가 -->
 	<h2>include 액션 태그</h2>
 	<h3>동적 include</h3>
-	<h4>JSP가 실행될 때 포함될 페이지를 별도로 실행하고, 그 출력 결과(HTML)를 현재 페이지에 삽</h4>
+	<h4>JSP가 실행될 때 포함될 페이지를 별도로 실행하고, 그 출력 결과(HTML)를 현재 페이지에 삽입</h4>
 	<h4>변수/스크립틀릿 등은 공유되지 않음</h4>
 	<jsp:include page="include_date.jsp"></jsp:include>
 	

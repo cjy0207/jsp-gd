@@ -11,7 +11,7 @@
 	<!-- include 시 동적으로 데이터를 넘길 수 있음 -->
 	<h2>include 액션 태그</h2>
 	<jsp:include page="includeTest2.jsp">
-		<jsp:param value="name" name="홍길동"/>
+		<jsp:param value="홍길동" name="name"/>
 	</jsp:include>
 	
 	
