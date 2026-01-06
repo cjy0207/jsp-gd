@@ -1,0 +1,130 @@
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="dto.Book"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!-- session이 연결되는 동안 도서 데이터를 공유하기 위해 사용 -->
+<%-- <jsp:useBean id="bookDAO" class="dao.BookRepository" scope="session" /> --%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>장바구니</title>
+<!-- 부트스트랩 연결 -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- 로컬에서 직접 넣기 -->
+<!-- <link rel="stylesheet" href="resources/css/bootstrap.min.css"> -->
+</head>
+<body>
+	<!-- 장바구니 뷰 페이지 작성하기 -->
+	<%
+	String cartId = session.getId(); // 세션 ID 얻기(장바구니 ID로 사용함)
+	%>
+	<div class="container py-4">
+		<%@ include file="menu.jsp"%>
+
+		<jsp:include page="title.jsp">
+			<jsp:param value="장바구니" name="title" />
+			<jsp:param value="Cart" name="sub" />
+		</jsp:include>
+
+		<div class="row align-items-md-stretch">
+			<div class="row">
+				<table width="100%">
+					<tr>
+						<td align="left"><a
+							href="./deleteCart.jsp?cartId=<%=cartId%>"
+							class="btn btn-danger">삭제하기</a></td>
+						<td align="right"><a
+							href="./shippingInfo.jsp?cartId=<%=cartId%>"
+							class="btn btn-success">주문하기</a></td>
+					</tr>
+				</table>
+			</div>
+
+			<div style="padding-top =: 50%">
+				<table class="table table-hover">
+					<tr>
+						<td>도서</td>
+						<td>가격</td>
+						<td>수량</td>
+						<td>소계</td>
+						<td>비고</td>
+					</tr>
+
+
+					<%-- <%
+						// 1. 세션에서 장바구니 가져오기
+						ArrayList<Book> cartList = (ArrayList<Book>) session.getAttribute("cartlist");
+
+						int sum = 0;
+
+						if (cartList == null || cartList.size() == 0) {
+					%>
+					
+					<tr>
+						<td colspan="5">장바구니가 비어 있습니다.</td>
+					</tr>
+					
+					<%
+						} else {
+						for (Book book : cartList) {
+							int total = book.getUnitPrice() * book.getQuantity();
+							sum += total;
+					%>
+					<tr>
+						<td><%=book.getBookId()%> - <%=book.getName()%></td>
+						<td><%=book.getUnitPrice()%>원</td>
+						<td><%=book.getQuantity()%></td>
+						<td><%=total%>원</td>
+						<td><a href="deleteCart.jsp?id=<%=book.getBookId()%>" class="btn btn-sm btn-danger">삭제</a></td>
+					</tr>
+					<%
+							}
+						}
+					%> --%>
+					
+					
+					<%
+						ArrayList<Book> cartList = (ArrayList<Book>) session.getAttribute("cartlist");
+						if(cartList == null){
+							cartList = new ArrayList<Book>();
+						}
+						
+						int sum = 0;
+						for(Book book : cartList){
+							int total = book.getUnitPrice() * book.getQuantity();
+							sum += total;
+					%>
+					
+					<tr>
+						<td><%=book.getBookId()%> - <%=book.getName()%></td>
+						<td><%=book.getUnitPrice()%>원</td>
+						<td><%=book.getQuantity()%></td>
+						<td><%=total%>원</td>
+						<td><a href="removeCart.jsp?id=<%=book.getBookId()%>" class="badge text-bg-danger">삭제</a></td>
+					</tr>
+					
+					<%
+						}
+					%>
+					
+					<tr>
+						<td></td>
+						<td></td>
+						<td>총액</td>
+						<td><%= sum %></td>
+						<td></td>
+					</tr>
+				</table>
+				<a href="./books.jsp" class= "btn btn-secondary">&laquo; 쇼필 계속하기</a>
+			</div>
+
+		</div>
+
+		<!-- 푸터(바닥글) 영역 -->
+		<%@ include file="footer.jsp"%>
+	</div>
+</body>
+</html>
