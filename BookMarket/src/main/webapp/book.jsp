@@ -84,7 +84,7 @@
 						<!-- post 요청이어도 쿼리스트링으로 데이터 보낼 수 있음 -->
 						<input type="hidden" name="bookId" value="<%= book.getBookId() %>">
 						<a href="#" class="btn btn-info"  onclick="addToCart()">도서주문 &raquo;</a> 
-						<a href="./cart.jsp" class="btn btn-waring">장바구니 &raquo;</a>
+						<a href="./cart.jsp" class="btn btn-warning">장바구니 &raquo;</a>
 						<a href="./books.jsp" class="btn btn-secondary">도서목록 &raquo;</a>
 					</form>
 				</p>
