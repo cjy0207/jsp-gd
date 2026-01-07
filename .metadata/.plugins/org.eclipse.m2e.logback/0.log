@@ -37,3 +37,5 @@ java.io.FileNotFoundException: /Users/choejiyun/Desktop/jsp/jsp-study/.metadata/
 2026-01-05 11:39:11,098 [Worker-1: Git Repository Change Scanner] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[/Users/choejiyun/Desktop/workspace/jsp/jsp-study/jsp-study-gonikim/.git]
 2026-01-05 17:29:33,280 [Worker-2: Remove Repositories] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[/Users/choejiyun/Desktop/workspace/jsp/jsp-study/jsp-study-gonikim/.git]
 2026-01-06 09:12:07,212 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-01-07 09:13:44,995 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2026-01-07 17:52:37,666 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

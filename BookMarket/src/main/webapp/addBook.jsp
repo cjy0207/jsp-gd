@@ -9,6 +9,8 @@
 	<title>도서 등록</title>
 	<!-- 부트스트랩 연결 -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="./resources/js/validation.js"></script>
 </head>
 <body>
 	<div class="container py-4">
