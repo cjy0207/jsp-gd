@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>회원 가입</title>
+	<title>회원 수정</title>
 </head>
 <body>
 	<sql:setDataSource var="dataSource"
